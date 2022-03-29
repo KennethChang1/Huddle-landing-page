@@ -25,12 +25,13 @@ a{
 .header{
     background-image: url('images/bg-hero-mobile.svg');
     margin-bottom: 5rem;
+    padding-top: 1em;
 }
 
 .header-top{
     display: flex;
     justify-content: space-between;
-    margin: 1.5em 1em 5em 1em;
+    margin: 0 1em 5em 1em;
 }
 
 .header-top > img{
@@ -54,13 +55,13 @@ a{
     margin: auto;
 }
 
-.header-content > p{
+.header-content div > p{
     font-family: 'Open Sans', sans-serif;
     line-height: 1.5rem;
     margin-bottom: 2rem;
 }
 
-.header-content > a{
+.header-content div > a{
     display: inline-block;
     font-size: 0.75rem;
     color: white;
@@ -71,7 +72,7 @@ a{
     margin-bottom: 3.5rem;
 }
 
-.header-content > img{
+.header-content div > img{
     width: 18.5rem;
     margin-bottom: 2.3rem;
 }
@@ -92,7 +93,7 @@ a{
     margin-bottom: 1.5rem;
 }
 
-.card > p{
+.card p{
     font-family: 'Open Sans', sans-serif;
     color: #808E9A;
     font-size: 14px;
@@ -162,4 +163,83 @@ footer p{
 
 .footer-link > p{
     margin-bottom: 1rem;
+}
+
+@media screen and (min-width:700px) {
+    h1{
+        font-size: 40px;
+    }
+
+    h2{
+        font-size: 28px;
+    }
+
+    .header{
+        background-image: url('images/bg-hero-desktop.svg');
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .header-top > img, .header-top>a{
+        width: 200px;
+    }
+
+    .header-top>a{
+        font-size: 14px;
+        padding-top: 7px;
+    }
+
+    .header-content{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        margin: 0;
+        width: 1270px;
+        text-align: left;
+    }
+
+    .header-content > div:nth-of-type(1){
+        width: 536px;
+    }
+
+    .header-content div:nth-of-type(2){
+        text-align: right;
+    }
+
+    .header-content div > img{
+        width: 680px;
+    }
+
+    .header-content a{
+        text-align: center;
+    }
+
+    .middle-container{
+        width: 1232px;
+        margin: 10rem auto;
+    }
+
+    .card{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        margin-bottom: 40px;
+    }
+
+    .card > img{
+        width: 440px;
+    }
+
+    .card > div{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 488px;
+        text-align: left;
+    }
+
+    .card p{
+        margin: 0;
+        font-size: 18px;
+        width: inherit;
+    }
 }
